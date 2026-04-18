@@ -1,0 +1,23 @@
+{
+  "name": "ai-demo-presenter",
+  "version": "0.1.0",
+  "description": "AI co-presenter that drives a live demo browser via Playwright MCP and Gemini Live.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node -e \"delete process.env.ELECTRON_RUN_AS_NODE; require('child_process').spawn(require('electron'), ['.'], { stdio: 'inherit' })\"",
+    "build:renderer": "esbuild src/renderer/index.jsx --bundle --outfile=src/renderer/bundle.js --loader:.jsx=jsx --loader:.js=jsx --jsx=automatic --format=cjs --platform=browser --external:electron --external:fs --external:path",
+    "build": "npm run build:renderer",
+    "dev": "npm run build:renderer && electron ."
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "dotenv": "latest",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest",
+    "esbuild": "latest"
+  }
+}

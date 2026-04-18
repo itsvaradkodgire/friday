@@ -1,0 +1,13 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "channel": "chrome",
+    "headless": false,
+    "contextOptions": { "viewport": { "width": 1280, "height": 800 } }
+  },
+  "server": {
+    "port": 8931,
+    "host": "localhost"
+  },
+  "sharedBrowserContext": true
+}

@@ -1,0 +1,24 @@
+# Environment
+.env
+*.env.local
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+presenter-app/src/renderer/bundle.js
+
+# User data (not for repo)
+presenter-app/flows/flows.json
+presenter-app/conversations.json
+knowledge/
+
+# Playwright MCP session artifacts
+.playwright-mcp/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
